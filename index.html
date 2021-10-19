@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Store front</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='index.css'>
+    <script src='index.js'></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+</head>
+<body onload="fetch_database()">
+    <nav id="top-nav-bar">
+        <div id="logo-div">
+            <img src="logo.png">
+        </div>
+        <div id="cart-div">
+            <p>Cart</p>
+        </div>
+        <div id="total-div">
+            <p>Total: <i id="total-output">0</i></p>
+        </div>
+    </nav>
+    <section>
+        <aside>
+            <img src="" id="image">
+            <button onclick="purchase(current_index)" id="purchase"> Purchase </button>
+            <div id="desc-div">
+
+                <p id="counter"></p>
+                <h1 id="name"></h1>
+                <p id="description"></p>
+                <p id="id"></p>
+                <p id="price"></p>
+                <p id="rating"></p>
+                <p id="stock"></p>
+                <div id="button-div">
+                    <button onclick=" previous()">Previous</button>
+                    <input type="number" placeholder="Rating min" min="1" max="5" id="filter"><button onclick="filter(document.getElementById('filter').value)">Filter</button>
+                    <button onclick=" next()">Next</button>
+                </div>
+            </div>
+
+        </aside>
+    </section>
+    
+</body>
+</html>
